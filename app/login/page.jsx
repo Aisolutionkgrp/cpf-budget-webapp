@@ -24,7 +24,7 @@ export default function LoginPage() {
   return (
     <div style={{
       minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center",
-      background: "linear-gradient(rgba(8,15,15,.55), rgba(8,15,15,.55)), url('/login-bg.png') center/cover no-repeat"
+      background: "linear-gradient(rgba(8,15,15,.5), rgba(8,15,15,.5)), url('/login1.png') center/cover no-repeat"
     }}>
       <div className="login-card">
         <div style={{ textAlign: "center", marginBottom: 18 }}>
