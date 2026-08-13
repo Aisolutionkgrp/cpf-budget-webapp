@@ -28,8 +28,8 @@ export default function LoginPage() {
     }}>
       <div className="login-card">
         <div style={{ textAlign: "center", marginBottom: 18 }}>
-          <div style={{ fontSize: 11, letterSpacing: 3, color: "var(--sub)", fontWeight: 700 }}>CPF PHILIPPINES · AI PROGRAM</div>
-          <div style={{ fontSize: 21, fontWeight: 800, marginTop: 4 }}>เข้าสู่ระบบ</div>
+          <div style={{ fontSize: 11, letterSpacing: 3, color: "rgba(255,255,255,.65)", fontWeight: 700 }}>CPF PHILIPPINES · AI PROGRAM</div>
+          <div style={{ fontSize: 21, fontWeight: 800, marginTop: 4, color: "#fff" }}>เข้าสู่ระบบ</div>
         </div>
         {err && <div className="banner err">{err}</div>}
         <form onSubmit={submit}>
