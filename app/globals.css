@@ -222,6 +222,15 @@ input, select { font-family: inherit; }
 .login-card .inp{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff;transition:background .2s,border-color .2s;}
 .login-card .inp::placeholder{color:rgba(255,255,255,.4);}
 .login-card .inp:focus{background:rgba(255,255,255,.16);border-color:var(--mint);outline-color:rgba(127,219,203,.25);}
+.login-card .inp:-webkit-autofill,
+.login-card .inp:-webkit-autofill:hover,
+.login-card .inp:-webkit-autofill:focus{
+  -webkit-text-fill-color:#fff;
+  caret-color:#fff;
+  -webkit-box-shadow:0 0 0 1000px rgba(20,35,35,.85) inset;
+  box-shadow:0 0 0 1000px rgba(20,35,35,.85) inset;
+  transition:background-color 9999s ease-in-out 0s;
+}
 .login-card .hint{color:rgba(255,255,255,.6);}
 .login-card .hint a{color:var(--mint);}
 .login-card .btn-primary{background:var(--brand);box-shadow:0 8px 24px rgba(23,163,152,.4);transition:transform .15s,box-shadow .15s;}
