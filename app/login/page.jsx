@@ -22,8 +22,11 @@ export default function LoginPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--paper)" }}>
-      <div className="card" style={{ width: 360, maxWidth: "90vw" }}>
+    <div style={{
+      minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center",
+      background: "linear-gradient(rgba(8,15,15,.55), rgba(8,15,15,.55)), url('/login-bg.png') center/cover no-repeat"
+    }}>
+      <div className="card" style={{ width: 360, maxWidth: "90vw", boxShadow: "0 20px 60px rgba(0,0,0,.35)" }}>
         <div style={{ textAlign: "center", marginBottom: 18 }}>
           <div style={{ fontSize: 11, letterSpacing: 3, color: "var(--sub)", fontWeight: 700 }}>CPF PHILIPPINES · AI PROGRAM</div>
           <div style={{ fontSize: 21, fontWeight: 800, marginTop: 4 }}>เข้าสู่ระบบ</div>
