@@ -40,7 +40,8 @@ export default function LoginPage() {
             <span className="fieldlbl">รหัสผ่าน</span>
             <input className="inp" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
           </label>
-          <button className="btn-primary" type="submit" disabled={loading} style={{ width: "100%" }}>
+          <button className="btn-primary" type="submit" disabled={loading} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+            {loading && <span className="spinner" />}
             {loading ? "กำลังเข้าสู่ระบบ…" : "เข้าสู่ระบบ"}
           </button>
         </form>

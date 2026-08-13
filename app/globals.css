@@ -239,12 +239,14 @@ input, select { font-family: inherit; }
 .login-card .hint a{color:var(--mint);}
 .login-card .btn-primary{background:var(--brand);box-shadow:0 8px 24px rgba(23,163,152,.4);transition:transform .15s,box-shadow .15s;}
 .login-card .btn-primary:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 10px 28px rgba(23,163,152,.5);}
+.spinner{width:15px;height:15px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;flex-shrink:0;}
+@keyframes spin{to{transform:rotate(360deg);}}
 .login-card .banner.err{background:rgba(209,67,67,.22);color:#ffc2c2;border:1px solid rgba(209,67,67,.4);}
 .cardhd{font-weight:700;font-size:15px;margin-bottom:12px;letter-spacing:-.2px;}
 .dimlabel{font-weight:400;color:var(--sub);font-size:12px;}
 .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
 .fieldlbl{display:block;font-size:11.5px;color:var(--sub);font-weight:600;margin-bottom:4px;}
-.inp{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:13px;background:#fff;box-sizing:border-box;font-family:inherit;}
+.inp{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:13px;line-height:1.6;background:#fff;box-sizing:border-box;font-family:inherit;}
 .inp-sm{width:130px;padding:6px 9px;}
 .inp:focus{outline:2px solid var(--brandSoft);border-color:var(--brand);}
 .tripmeta{margin-top:12px;font-size:12.5px;color:var(--ink);background:var(--paper);padding:11px 13px;border-radius:10px;}
