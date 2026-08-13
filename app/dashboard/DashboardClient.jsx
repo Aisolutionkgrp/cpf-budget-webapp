@@ -302,21 +302,6 @@ function ProjectUsageChart({ rows }) {
         <div className="chartcard-tag">{rows.length} โครงการ</div>
       </div>
 
-      <div className="batch-nav">
-        <button className="batch-arrow" onClick={() => setBatch((b) => Math.max(0, b - 1))} disabled={active === 0} aria-label="แบชก่อนหน้า">
-          <ChevronLeft size={16} strokeWidth={2.4} />
-        </button>
-        <div className="batch-dots">
-          {groups.map((g, gi) => (
-            <button key={g.cat} className={`batch-dot${gi === active ? " active" : ""}`} onClick={() => setBatch(gi)}
-              style={gi === active ? { background: g.color } : undefined} title={`แบช ${gi + 1} — ${g.catTh}`} />
-          ))}
-        </div>
-        <button className="batch-arrow" onClick={() => setBatch((b) => Math.min(groups.length - 1, b + 1))} disabled={active === groups.length - 1} aria-label="แบชถัดไป">
-          <ChevronRight size={16} strokeWidth={2.4} />
-        </button>
-      </div>
-
       <div className="batch-viewport">
         <div className="batch-track" style={{ transform: `translateX(-${active * 100}%)` }}>
           {groups.map((g, gi) => (
@@ -347,6 +332,21 @@ function ProjectUsageChart({ rows }) {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="batch-nav">
+        <button className="batch-arrow" onClick={() => setBatch((b) => Math.max(0, b - 1))} disabled={active === 0} aria-label="แบชก่อนหน้า">
+          <ChevronLeft size={16} strokeWidth={2.4} />
+        </button>
+        <div className="batch-dots">
+          {groups.map((g, gi) => (
+            <button key={g.cat} className={`batch-dot${gi === active ? " active" : ""}`} onClick={() => setBatch(gi)}
+              style={gi === active ? { background: g.color } : undefined} title={`แบช ${gi + 1} — ${g.catTh}`} />
+          ))}
+        </div>
+        <button className="batch-arrow" onClick={() => setBatch((b) => Math.min(groups.length - 1, b + 1))} disabled={active === groups.length - 1} aria-label="แบชถัดไป">
+          <ChevronRight size={16} strokeWidth={2.4} />
+        </button>
       </div>
     </div>
   );
