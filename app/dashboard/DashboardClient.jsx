@@ -247,19 +247,6 @@ function TripDashboard({ trips, settings, projects }) {
                 </tbody>
               </table>
             </div>
-            <table className="tbl mini" style={{ marginTop: 14 }}>
-              <thead><tr><th style={{ textAlign: "left" }}>โครงการ</th><th>วัน</th><th>คน</th><th>แมนเดย์</th><th>เบี้ยเลี้ยง</th><th>ตั๋ว</th><th>รวม</th></tr></thead>
-              <tbody>
-                {c.lines.map((l, i) => (
-                  <tr key={i}>
-                    <td style={{ textAlign: "left" }}>{l.projectCode}</td>
-                    <td className="num">{l.nDays}</td><td className="num">{l.people.length}</td>
-                    <td className="num">{fmtInt(l.manday)}</td><td className="num">{fmtInt(l.perDiem)}</td>
-                    <td className="num">{fmtInt(l.flight)}</td><td className="num" style={{ fontWeight: 600 }}>{fmtInt(l.total)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         );
       })}
